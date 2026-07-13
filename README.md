@@ -36,8 +36,11 @@ scanner/
 
 ### Perl
 - Perl 5.x
+  Install all the modules at the top of the .pl script with CPAN
+
+### Other
 - Hamlib (optional but recommended)
-- rigctld (if using Hamlib CAT control)
+- rigctld (if using Hamlib CAT control), it comes with Hamlib
 
 ### Python
 - Python 3.9+
