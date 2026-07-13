@@ -36,7 +36,7 @@ scanner/
 
 ### Perl
 - Perl 5.x
-  Install all the modules at the top of the .pl script with CPAN
+- Install all the modules at the top of the .pl script with CPAN
 
 ### Other
 - Hamlib (optional but recommended)
