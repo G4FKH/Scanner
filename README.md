@@ -13,7 +13,7 @@ The scanner performs a frequency sweep across a chosen HF band, samples the S me
 
 ## Contents
 
-'''
+```
 scanner/ 
 │ 
 ├── perl/ 
@@ -31,7 +31,7 @@ scanner/
 ├── 80m_sweep.csv # Example sweep data 
 └── 40m_sweep.csv # Example sweep data
 
-'''
+```
 
 ## Requirements
 
