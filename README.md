@@ -97,7 +97,7 @@ scanner/
   - `pandas`
   - `numpy` (optional)
 -  Perl Modules
-  - use CPAN to install all libraries at the top of the script
+  - use CPAN to install all modules at the top of the script
 
 ### 7. Operating Environment
 - Tested on:
