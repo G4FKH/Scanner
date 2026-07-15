@@ -36,17 +36,104 @@ scanner/
 - Hamlib (optional, for extended CAT support)  
 - Matplotlib, Pandas (for plotting scripts)
 
+## Technical Specification
+
+### 1. System Architecture
+- Modular HF scanning system comprising:
+  - CAT‑controlled sweep engine (Perl)
+  - Data acquisition and CSV logging
+  - Python‑based analysis and visualisation modules
+- Operates on standard HF transceivers supporting CAT commands (Kenwood, Icom, Yaesu, via Hamlib or native CAT).
+
+### 2. Sweep Controller (Perl)
+- Frequency stepping:
+  - User‑defined start/stop frequencies (Hz)
+  - Fixed step size (Hz)
+  - Optional dwell time per step
+- Radio control:
+  - CAT commands issued over serial/USB
+  - Hamlib optional for extended device support
+- Measurement:
+  - S‑meter sampling at each frequency step
+  - Timestamped acquisition
+- Output:
+  - CSV file containing: frequency, S‑meter value, timestamp
+
+### 3. Data Format (CSV)
+- Columns:
+  - `freq_hz` — tuned frequency (Hz)
+  - `s_meter` — raw or normalised S‑meter reading
+  - `timestamp` — ISO‑8601 UTC timestamp
+- Guaranteed stable schema for downstream processing.
+
+### 4. Python Analysis Modules
+#### plot_panoramic.py
+- Generates panoramic band‑sweep plots.
+- Features:
+  - Frequency‑domain visualisation
+  - Optional smoothing or median filtering
+  - PNG/SVG output
+
+#### plot_timeseries.py
+- Produces time‑series stability plots.
+- Features:
+  - S‑meter vs. time visualisation
+  - Supports multi‑file comparison
+  - PNG/SVG output
+
+#### scanner_block_diagram.py / scanner_hamlib_diagram.py
+- Generates architecture and compatibility diagrams.
+- Output formats: PNG/SVG.
+
+### 5. Performance Characteristics
+- Sweep rate determined by:
+  - CAT command latency
+  - Radio tuning speed
+  - Step size and dwell time
+- Typical sweep cadence:
+  - 3–5 seconds per full HF band segment (radio‑dependent)
+- Data throughput:
+  - ~100–500 samples per sweep depending on configuration.
+
+### 6. Dependencies
+- Perl 5.x
+- Python 3.x
+- Hamlib (optional)
+- Python libraries:
+  - `matplotlib`
+  - `pandas`
+  - `numpy` (optional)
+
+### 7. Operating Environment
+- Tested on:
+  - Linux (Debian/Ubuntu)
+  - macOS
+  - Windows (with appropriate serial drivers)
+- Requires stable CAT connection (USB/serial).
+
+### 8. Limitations
+- Sweep accuracy limited by radio CAT tuning resolution.
+- S‑meter readings are radio‑specific and not calibrated in dBm.
+- High sweep rates may cause CAT buffer overruns on older radios.
+
+### 9. File Outputs
+- CSV data files (primary)
+- PNG/SVG figures (secondary)
+- Optional logs for debugging CAT communication.
+
+
 ## Usage
 
 ### 1. Run a sweep
 
 perl sweep_controller.pl --start 3500 --stop 3800 --step 5 --radio IC7300
+
 2. Generate panoramic plot
-bash
 python plot_panoramic.py examples/80m_sweep.csv
+
 3. Generate time‑series plot
-bash
 python plot_timeseries.py examples/80m_sweep.csv
+
 Notes
 Sweep cadence and timing depend on radio CAT latency
 
