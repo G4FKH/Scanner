@@ -76,7 +76,7 @@ Panoramic plot:
 bash
 python plot_panoramic.py 2026-07-12_80m_sweep.csv
 
-The repository includes the exact scripts used to generate Figures 1 and 4:
+The repository includes the exact scripts used to generate Figures 2 and 3:
 •	scanner_block_diagram.py – System architecture diagram
 •	scanner_hamlib_diagram.py – Hamlib multi rig compatibility diagram
 These produce high resolution PNG files for inclusion in the manuscript.
