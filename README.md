@@ -26,7 +26,7 @@ scanner/
 - CAT-controlled sweep across a defined HF band segment  
 - S‑meter sampling at each frequency step  
 - Output stored as CSV for downstream analysis  
-- Python tools generate panoramic band plots and time‑series stability plots  
+- Python tools generate panoramic band plots  
 - Compatible with Hamlib‑supported radios
 
 ## Requirements
@@ -74,13 +74,6 @@ scanner/
   - Optional smoothing or median filtering
   - PNG/SVG output
 
-#### plot_timeseries.py
-- Produces time‑series stability plots.
-- Features:
-  - S‑meter vs. time visualisation
-  - Supports multi‑file comparison
-  - PNG/SVG output
-
 #### scanner_block_diagram.py / scanner_hamlib_diagram.py
 - Generates architecture and compatibility diagrams.
 - Output formats: PNG/SVG.
@@ -103,6 +96,8 @@ scanner/
   - `matplotlib`
   - `pandas`
   - `numpy` (optional)
+-  Perl Modules
+  - use CPAN to install all libraries at the top of the script
 
 ### 7. Operating Environment
 - Tested on:
