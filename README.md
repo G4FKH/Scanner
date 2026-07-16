@@ -120,15 +120,12 @@ scanner/
 
 ### 1. Run a sweep
 
-perl sweep_controller.pl --start 3500 --stop 3800 --step 5 --radio IC7300
+perl scanner.pl --start 3500 --stop 3800 --step 5 --radio IC7300
 
 2. Generate panoramic plot
-python plot_panoramic.py examples/80m_sweep.csv
+python plot_sweep.py (examples/80m_sweep.csv)
 
-3. Generate time‑series plot
-python plot_timeseries.py examples/80m_sweep.csv
-
-Notes
+   Notes
 Sweep cadence and timing depend on radio CAT latency
 
 CSV format is stable and suitable for external analysis
