@@ -122,7 +122,7 @@ scanner/
 
 1. NB: rigctld must be started prior to running the scanner.pl script.
 
-   i.e. rigctld -m 2039 -r COM1 -s 115200
+   e.g. - rigctld -m 2039 -r COM1 -s 115200
    
    perl scanner.pl
 
