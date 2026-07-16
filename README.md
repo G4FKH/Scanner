@@ -121,9 +121,10 @@ scanner/
 ### 10. Run a sweep
 
 1. NB: rigctld must be started prior to running the scanner.pl script.
+
    i.e. rigctld -m 2039 -r COM1 -s 115200
    
-   perl scanner.pl --start 3500 --stop 3800 --step 5 --radio IC7300
+   perl scanner.pl
 
 3. Generate panoramic plot
 
