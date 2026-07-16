@@ -118,11 +118,15 @@ scanner/
 
 ## Usage
 
-### 1. Run a sweep
+### 10. Run a sweep
 
-perl scanner.pl --start 3500 --stop 3800 --step 5 --radio IC7300
+1. NB: rigctld must be started prior to running the scanner.pl script.
+   i.e. rigctld -m 2039 -r COM1 -s 115200
+   
+   perl scanner.pl --start 3500 --stop 3800 --step 5 --radio IC7300
 
-2. Generate panoramic plot
+3. Generate panoramic plot
+
 python plot_sweep.py (examples/80m_sweep.csv)
 
 Notes:
