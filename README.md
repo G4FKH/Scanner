@@ -7,10 +7,10 @@ A modular HF band‑scanner for CAT‑controlled frequency sweeps, S‑meter sam
 scanner/
 │
 ├── perl/
-│   └── sweep_controller.pl        # CAT-controlled frequency sweep + S‑meter sampling
+│   └── scanner.pl                 # CAT-controlled frequency sweep + S‑meter sampling
 │
 ├── python/
-│   ├── plot_panoramic.py          # Panoramic band plot (e.g., 80 m, 40 m)
+│   ├── plot_sweep.py              # Panoramic band plot (e.g., 80 m, 40 m)
 │   ├── scanner_block_diagram.py   # Figure 1 (system architecture)
 │   └── scanner_hamlib_diagram.py  # Figure 4 (Hamlib compatibility)
 │
