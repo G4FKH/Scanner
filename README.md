@@ -122,9 +122,11 @@ scanner/
 
 1. NB: rigctld must be started prior to running the scanner.pl script.
 
-   e.g. - rigctld -m 2039 -r COM1 -s 115200
+   E.G. from a command prompt - rigctld -m 2039 -r COM1 -s 115200
    
-   perl scanner.pl
+   scanner.pl
+
+   Close the command prompt with CNTL-C
 
 3. Generate panoramic plot
 
