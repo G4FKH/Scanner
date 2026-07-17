@@ -66,7 +66,7 @@ scanner/
 - Guaranteed stable schema for downstream processing.
 
 ### 4. Python Analysis Modules
-#### plot_panoramic.py
+#### plot_sweep.py
 - Generates panoramic band‑sweep plots.
 - Features:
   - Frequency‑domain visualisation
