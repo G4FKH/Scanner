@@ -98,6 +98,8 @@ scanner/
 -  Perl Modules
   - use CPAN to install all modules at the top of the script
 
+  NB: Local addresses in the .pl and .py files should be amended.
+
 ### 7. Operating Environment
 - Tested on:
   - Linux (Debian/Ubuntu)
