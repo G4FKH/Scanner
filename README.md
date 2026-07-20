@@ -132,7 +132,7 @@ scanner/
 
 3. Generate panoramic plot
 
-python plot_sweep.py (examples/80m_sweep.csv)
+python plot_sweep.py (examples/80m_sweep.png & 40m_sweeep.png)
 
 Notes:
 Sweep cadence and timing depend on radio CAT latency
