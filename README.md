@@ -12,11 +12,10 @@ scanner/
 ├── python/
 │   ├── plot_sweep.py              # Panoramic band plot (e.g., 80 m, 40 m)
 │   ├── scanner_block_diagram.py   # Figure 1 (system architecture)
-│   └── scanner_hamlib_diagram.py  # Figure 4 (Hamlib compatibility)
 │
 └── examples/
-├── 80m_sweep.csv                  # Example sweep data
-└── 40m_sweep.csv                  # Example sweep data
+├── 80m_sweep.csv                  # Figure 2 - Example sweep data
+└── 40m_sweep.csv                  # Figure 3 - Example sweep data
 
 ```
 
