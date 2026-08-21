@@ -73,9 +73,9 @@ scanner/
   - Optional smoothing or median filtering
   - PNG/SVG output
 
-#### scanner_block_diagram.py / scanner_hamlib_diagram.py
-- Generates architecture and compatibility diagrams.
-- Output formats: PNG/SVG.
+#### scanner_block_diagram.png / scanner_hamlib_diagram.png
+- Shows architecture and compatibility diagrams.
+- Output format: PNG.
 
 ### 5. Performance Characteristics
 - Sweep rate determined by:
