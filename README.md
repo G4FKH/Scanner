@@ -44,6 +44,7 @@ scanner/
 - Operates on standard HF transceivers supporting CAT commands (Kenwood, Icom, Yaesu, via Hamlib or native CAT).
 
 ### 2. Sweep Controller (Perl)
+#### scanner.pl
 - Frequency stepping:
   - User‑defined start/stop frequencies (Hz)
   - Fixed step size (Hz)
