@@ -252,7 +252,7 @@ Before submitting:
 
 ---
 
-##License
+## License
 
 This project is released under the MIT license. You are free to use, modify, and extend the code for your own experiments.
 
