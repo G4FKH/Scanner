@@ -34,7 +34,8 @@ scanner/
 │
 ├── docs/
 │   ├── scanner_block_diagram.png
-│   └── scanner_hamlib_diagram.png
+│   ├── scanner_hamlib_diagram.png
+|   └── scan_26-08-10_10-45-52.csv
 │
 ├── README.md
 ├── LICENSE
