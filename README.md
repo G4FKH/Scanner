@@ -29,8 +29,8 @@ scanner/
 │   └── scanner_block_diagram.py
 │
 ├── examples/
-│   ├── 80m_sweep.csv
-│   └── 40m_sweep.csv
+│   ├── Figure3.png
+│   └── Figure4.png
 │
 ├── docs/
 │   ├── scanner_block_diagram.png
