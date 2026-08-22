@@ -42,6 +42,8 @@ scanner/
 └── VERSION
 ```
 
+---
+
 ## Requirements
 
 ### Perl
