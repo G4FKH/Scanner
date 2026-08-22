@@ -211,7 +211,7 @@ cpan install Win32::SerialPort
 
 Below is an example panoramic sweep plot generated using `plot_sweep.py`:
 
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+![Example Sweep Plot](examples/figure4.png)
 
 This plot shows signal strength across the band, with frequency on the x‑axis and S‑meter values on the y‑axis.
 
