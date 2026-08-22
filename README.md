@@ -119,8 +119,7 @@ The script automatically picks up the latest CSV file. This generates a panorami
 
 Example sweep CSVs are provided in `examples/`:
 
-- `40m_sweep.csv`
-- `80m_sweep.csv`
+- `scan_2026-08-10_10-45-52.csv`
 
 ---
 
