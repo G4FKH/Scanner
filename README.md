@@ -79,6 +79,8 @@ pip install pandas matplotlib
 
 ### 1. Run a sweep (Perl, GUI‑driven)
 
+Start rigctld, e.g. rigctld -m 2039 -r COM1 -s 115200
+
 Launch the sweep controller:
 
 ```bash
