@@ -1,150 +1,74 @@
-# HF Scanner System
+# Scanner — HF Sweep Engine & Panoramic Plotting
 
-A modular HF band‑scanner for CAT‑controlled frequency sweeps, S‑meter sampling, and panoramic/time‑series visualisation. Includes Perl sweep controller, Python analysis tools, and example datasets.
+Scanner is a CAT‑controlled HF sweep engine written in Perl, with Python tools for panoramic sweep plotting. It performs frequency sweeps, samples the rig’s S‑meter, and stores results as timestamped CSV files for later analysis.
 
-## Contents
-```
+---
+
+## Features
+
+- CAT‑controlled HF sweep engine (`perl/scanner.pl`)
+- GUI input for sweep parameters (start/stop frequency, step size)
+- Timestamped CSV logging with S‑meter sampling
+- Python panoramic sweep plotting (`python/plot_sweep.py`)
+- Architecture diagrams (`docs/`)
+- Example sweep datasets (`examples/`)
+- MIT‑licensed
+
+---
+
+## Repository structure
+
+```text
 scanner/
 │
 ├── perl/
-│   └── scanner.pl                 # CAT-controlled frequency sweep + S‑meter sampling
+│   └── scanner.pl
 │
 ├── python/
-│   ├── plot_sweep.py              # Panoramic band plot (e.g., 80 m, 40 m)
-│   ├── scanner_block_diagram.py   # Figure 1 (system architecture)
+│   ├── plot_sweep.py
+│   └── scanner_block_diagram.py
 │
-└── examples/
-├── 80m_sweep.csv                  # Figure 2 - Example sweep data
-└── 40m_sweep.csv                  # Figure 3 - Example sweep data
-
+├── examples/
+│   ├── 80m_sweep.csv
+│   └── 40m_sweep.csv
+│
+├── docs/
+│   ├── scanner_block_diagram.png
+│   └── scanner_hamlib_diagram.png
+│
+├── README.md
+├── LICENSE
+├── CHANGELOG.md
+└── VERSION
 ```
 
-## Overview
-
-- CAT-controlled sweep across a defined HF band segment  
-- S‑meter sampling at each frequency step  
-- Output stored as CSV for downstream analysis  
-- Python tools generate panoramic band plots  
-- Compatible with Hamlib‑supported radios
+---
 
 ## Requirements
 
+### Perl
 - Perl 5.x  
+- Hamlib (optional, for rig control)
+### Perl modules
+
+Scanner uses several Perl modules which may not be installed by default.  
+Use CPAN to install any missing modules:
+
+```bash
+cpan install Tk Time::HiRes IO::Socket::INET Time::HiRes qw(usleep) POSIX qw(strftime) IO::Handle Cwd Win32 Win32::GUI;
+```
+
+### Python
 - Python 3.x  
-- Hamlib (optional, for extended CAT support)  
-- Matplotlib, Pandas (for plotting scripts)
+- pandas  
+- matplotlib
 
-## Technical Specification
+Install Python dependencies:
 
-### 1. System Architecture
-- Modular HF scanning system comprising:
-  - CAT‑controlled sweep engine (Perl)
-  - Data acquisition and CSV logging
-  - Python‑based analysis and visualisation modules
-- Operates on standard HF transceivers supporting CAT commands (Kenwood, Icom, Yaesu, via Hamlib or native CAT).
-
-### 2. Sweep Controller (Perl)
-#### scanner.pl
-- Frequency stepping:
-  - User‑defined start/stop frequencies (Hz)
-  - Fixed step size (Hz)
-  - Optional dwell time per step
-- Radio control:
-  - CAT commands issued over serial/USB
-  - Hamlib optional for extended device support
-- Measurement:
-  - S‑meter sampling at each frequency step
-  - Timestamped acquisition
-- Output:
-  - CSV file containing: frequency, S‑meter value, timestamp
-
-### 3. Data Format (CSV)
-- Columns:
-  - `freq_hz` — tuned frequency (Hz)
-  - `s_meter` — raw or normalised S‑meter reading
-  - `timestamp` — ISO‑8601 UTC timestamp
-- Guaranteed stable schema for downstream processing.
-
-### 4. Python Analysis Modules
-#### plot_sweep.py
-- Generates panoramic band‑sweep plots.
-- Features:
-  - Frequency‑domain visualisation
-  - Optional smoothing or median filtering
-  - PNG/SVG output
-
-#### scanner_block_diagram.png / scanner_hamlib_diagram.png
-- Shows architecture and compatibility diagrams.
-- Output format: PNG.
-
-### 5. Performance Characteristics
-- Sweep rate determined by:
-  - CAT command latency
-  - Radio tuning speed
-  - Step size and dwell time
-- Typical sweep cadence:
-  - 3–5 seconds per full HF band segment (radio‑dependent)
-- Data throughput:
-  - ~100–500 samples per sweep depending on configuration.
-
-### 6. Dependencies
-- Perl 5.x
-- Python 3.x
-- Hamlib (optional)
-- Python libraries:
-  - `matplotlib`
-  - `pandas`
-  - `numpy` (optional)
--  Perl Modules
-  - use CPAN to install all modules at the top of the script
-
-  NB: Local addresses in the .pl and .py files should be amended.
-
-### 7. Operating Environment
-- Tested on:
-  - Linux (Debian/Ubuntu)
-  - macOS
-  - Windows (with appropriate serial drivers)
-- Requires stable CAT connection (USB/serial).
-
-### 8. Limitations
-- Sweep accuracy limited by radio CAT tuning resolution.
-- S‑meter readings are radio‑specific and not calibrated in dBm.
-- High sweep rates may cause CAT buffer overruns on older radios.
-
-### 9. File Outputs
-- CSV data files (primary)
-- PNG/SVG figures (secondary)
-- Optional logs for debugging CAT communication.
+```bash
+pip install pandas matplotlib
+```
 
 
-## Usage
 
-### 10. Run a sweep
 
-1. NB: rigctld must be started prior to running the scanner.pl script.
-
-   E.G. from a command prompt - rigctld -m 2039 -r COM1 -s 115200
-   
-   scanner.pl
-
-   Close the command prompt with CNTL-C
-
-3. Generate panoramic plot
-
-python plot_sweep.py (examples/80m_sweep.png & 40m_sweeep.png)
-
-Notes:
-Sweep cadence and timing depend on radio CAT latency
-
-CSV format is stable and suitable for external analysis
-
-Figures are generated as PNG/SVG for publication use
-
-## License
-This project is released under the MIT License. You are free to use, modify, and extend the code for your own experiments.
-
-## Contact
-Gwyn, G4FKH
-
-Chelmsford, Essex
