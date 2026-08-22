@@ -213,7 +213,7 @@ Below is an example panoramic sweep plot generated using `plot_sweep.py`:
 
 ![Example Sweep Plot](examples/Figure4.png)
 
-This plot shows signal strength across the band, with frequency on the x‑axis and S‑meter values on the y‑axis.
+This plot shows signal strength across the band, with frequency on the x‑axis and dB/S‑meter values on the y‑axis.
 
 ---
 
