@@ -102,16 +102,16 @@ The script then controls the rig via CAT, samples the S‑meter, and writes a CS
 Example output filename:
 
 ```
-2026-08-22_40m_sweep.csv
+scan_2026-08-10_10-45-52.csv
 ```
 
 ### 2. Plot a sweep (Python)
 
 ```bash
-python python/plot_sweep.py 2026-08-22_40m_sweep.csv
+python python/plot_sweep.py
 ```
 
-This generates a panoramic sweep plot showing signal strength across the band.
+The script automatically picks up the latest CSV file. This generates a panoramic sweep plot showing signal strength across the band.
 
 ---
 
