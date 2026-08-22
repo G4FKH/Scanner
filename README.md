@@ -81,15 +81,15 @@ These values define the sweep range and resolution.
 
 ### Sweep Process
 
-Once you click **Start Sweep**:
+Once you click **Continue**:
 
 1. The script controls the rig via CAT.
 2. Frequencies are stepped according to your chosen interval.
-3. The S‑meter is sampled at each step.
+3. The dB value is sampled at each step.
 4. Results are written to a timestamped CSV file.
 
 Example output:
-2026-08-22_40m_sweep.csv
+docs/2026-08-22_40m_sweep.csv
 
 The GUI ensures sweep parameters are always entered correctly and avoids hard‑coding values in the script.
 
@@ -137,11 +137,7 @@ cpan install Win32::SerialPort
 
 ---
 
-# ⭐ 3. **Example Plot** (placeholder until you upload a PNG)
-
-When you upload a PNG of one of your sweep plots (e.g., `docs/example_plot.png`), paste this section:
-
-## Example Plot
+# ⭐ 3. **Example Plot**
 
 Below is an example panoramic sweep plot generated using `plot_sweep.py`:
 
@@ -149,5 +145,43 @@ Below is an example panoramic sweep plot generated using `plot_sweep.py`:
 
 This plot shows signal strength across the band, with frequency on the x‑axis and S‑meter values on the y‑axis.
 
+---
 
+## Contributing
+
+Contributions are welcome. The repository includes structured GitHub issue templates to help
+maintainers and users report problems or request enhancements.
+
+### Issue Types
+
+- **Bug Report** — for problems with the sweep engine or plotting tools  
+- **Feature Request** — for new capabilities or improvements  
+- **Data Issue** — for sweep CSV or plot anomalies
+
+### Pull Requests
+
+If submitting code changes:
+
+1. Fork the repository  
+2. Create a feature branch  
+3. Commit changes with clear messages  
+4. Submit a pull request describing the change
+
+### Code Style
+
+- Perl: follow `strict` and `warnings` conventions  
+- Python: PEP‑8 style preferred  
+- Include comments for non‑obvious logic  
+- Provide example data when relevant
+
+### Testing
+
+Before submitting:
+
+- Run a sweep using the GUI  
+- Verify CSV output  
+- Generate a plot using `plot_sweep.py`  
+- Confirm no regressions in existing functionality
+
+---
 
