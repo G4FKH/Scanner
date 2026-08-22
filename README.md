@@ -69,6 +69,85 @@ Install Python dependencies:
 pip install pandas matplotlib
 ```
 
+## How the GUI Works
+
+When you run `scanner.pl`, a GUI window appears prompting you for the sweep parameters:
+
+- **Start Frequency**  
+- **Stop Frequency**  
+- **Step Size**
+
+These values define the sweep range and resolution.
+
+### Sweep Process
+
+Once you click **Start Sweep**:
+
+1. The script controls the rig via CAT.
+2. Frequencies are stepped according to your chosen interval.
+3. The S‑meter is sampled at each step.
+4. Results are written to a timestamped CSV file.
+
+Example output:
+2026-08-22_40m_sweep.csv
+
+The GUI ensures sweep parameters are always entered correctly and avoids hard‑coding values in the script.
+
+## Troubleshooting CAT/COM Ports
+
+CAT control depends on correct serial port configuration. If the sweep does not start or the rig
+does not respond, check the following:
+
+### 1. Confirm the correct COM port
+On Windows:
+
+- Open **Device Manager**
+- Expand **Ports (COM & LPT)**
+- Identify the COM port used by your rig (e.g., `COM3`, `COM5`)
+
+Update the script or GUI settings accordingly.
+
+### 2. Check rig CAT settings
+Ensure:
+
+- CAT is enabled on the rig
+- Baud rate matches the script
+- Stop bits, parity, and flow control match your rig’s documentation
+
+### 3. Close other CAT applications
+Only one program can access the COM port at a time. Close:
+
+- Hamlib/rigctl
+- FLRig
+- WSJT‑X
+- Any logging software using CAT
+
+### 4. Permissions (Windows)
+If the script cannot open the COM port:
+
+- Run the terminal as **Administrator**
+- Ensure no antivirus is blocking Perl scripts
+
+### 5. Win32::SerialPort issues
+If CPAN reports missing modules:
+
+```bash
+cpan install Win32::SerialPort
+```
+
+---
+
+# ⭐ 3. **Example Plot** (placeholder until you upload a PNG)
+
+When you upload a PNG of one of your sweep plots (e.g., `docs/example_plot.png`), paste this section:
+
+## Example Plot
+
+Below is an example panoramic sweep plot generated using `plot_sweep.py`:
+
+![Example Sweep Plot](docs/example_plot.png)
+
+This plot shows signal strength across the band, with frequency on the x‑axis and S‑meter values on the y‑axis.
 
 
 
