@@ -57,6 +57,7 @@ Use CPAN to install any missing modules:
 ```bash
 cpan install Tk Time::HiRes IO::Socket::INET Time::HiRes qw(usleep) POSIX qw(strftime) IO::Handle Cwd Win32 Win32::GUI;
 ```
+---
 
 ### Python
 - Python 3.x  
@@ -68,6 +69,7 @@ Install Python dependencies:
 ```bash
 pip install pandas matplotlib
 ```
+---
 
 ## How the GUI Works
 
@@ -78,6 +80,8 @@ When you run `scanner.pl`, a GUI window appears prompting you for the sweep para
 - **Step Size**
 
 These values define the sweep range and resolution.
+
+---
 
 ### Sweep Process
 
@@ -92,6 +96,8 @@ Example output:
 docs/2026-08-10_10-45-52.csv
 
 The GUI ensures sweep parameters are always entered correctly and avoids hard‑coding values in the script.
+
+---
 
 ## Troubleshooting CAT/COM Ports
 
@@ -173,6 +179,8 @@ If submitting code changes:
 - Python: PEP‑8 style preferred  
 - Include comments for non‑obvious logic  
 - Provide example data when relevant
+
+---
 
 ### Testing
 
