@@ -89,7 +89,7 @@ Once you click **Continue**:
 4. Results are written to a timestamped CSV file.
 
 Example output:
-docs/2026-08-22_40m_sweep.csv
+docs/2026-08-10_10-45-52.csv
 
 The GUI ensures sweep parameters are always entered correctly and avoids hard‑coding values in the script.
 
