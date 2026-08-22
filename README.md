@@ -1,6 +1,6 @@
 # Scanner — HF Sweep Engine & Panoramic Plotting
 
-Scanner is a CAT‑controlled HF sweep engine written in Perl, with Python tools for panoramic sweep plotting. It performs frequency sweeps, samples the rig’s S‑meter, and stores results as timestamped CSV files for later analysis.
+Scanner is a CAT‑controlled HF sweep engine written in Perl, with Python tools for panoramic sweep plotting. It performs frequency sweeps, samples the rig’s dB value, and stores results as timestamped CSV files for later analysis.
 
 ---
 
