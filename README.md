@@ -144,7 +144,7 @@ These values define the sweep range and resolution.
 
 ### Sweep Process
 
-Once you click **Continue**:
+Once you click **Proceed**:
 
 1. The script controls the rig via CAT.  
 2. Frequencies are stepped according to your chosen interval.  
