@@ -227,6 +227,8 @@ The repository includes structured GitHub issue templates to help maintainers an
 - **Bug Report**  
 - **Feature Request**  
 - **Data Issue**
+  
+These issue types correspond to GitHub Issue Templates stored in .github/ISSUE_TEMPLATE/ and appear when creating a new issue.
 
 ### Pull Requests
 
