@@ -108,7 +108,7 @@ scan_2026-08-10_10-45-52.csv
 ### 2. Plot a sweep (Python)
 
 ```bash
-python python/plot_sweep.py
+python plot_sweep.py
 ```
 
 The script automatically picks up the latest CSV file. This generates a panoramic sweep plot showing signal strength across the band.
