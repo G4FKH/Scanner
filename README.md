@@ -73,6 +73,10 @@ Install Python dependencies:
 pip install pandas matplotlib
 ```
 
+### NB
+
+Both the PERL and Python scripts require internal directory changes, PERL lines 249, 254 and 255. In Python line 13.
+
 ---
 
 ## Quick start
